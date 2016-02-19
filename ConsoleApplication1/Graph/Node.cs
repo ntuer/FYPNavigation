@@ -64,6 +64,36 @@ namespace ConsoleApplication1
             return this.y;
         }
 
+        /********For searching algorithm***********/
+        public float dijkstraDistance
+        {
+            get; set;
+        }
+
+        public float heuristicDistance
+        {
+            get; set;
+        }
+
+        public float distance
+        {
+            get; set;
+        }
+        public void updateDistance()
+        {
+            distance = heuristicDistance + dijkstraDistance;
+        }
+
+        public Boolean isVisited
+        {
+            get; set;
+        }
+        public Node previousNode
+        {
+            get; set;
+        }
+
+        /*******************/
 
         public void addNeighbor(Node node)
         {
@@ -112,6 +142,15 @@ namespace ConsoleApplication1
         public void setElevatorGroupNum(int num)
         {
             this.elevatorGroupNum = num;
+        }
+
+        public void reset()
+        {
+            this.isVisited = false;
+            this.dijkstraDistance = 0;
+            this.heuristicDistance = 0;
+            this.distance = 0;
+            this.previousNode = null;
         }
     }
 }

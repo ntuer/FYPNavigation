@@ -38,6 +38,7 @@ namespace ConsoleApplication1
             get; set;
         }
 
+        override
         public string ToString()
         {
             return this.buildingName + "-" + floorName + "-" + nodeId; 

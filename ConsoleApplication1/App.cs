@@ -14,6 +14,7 @@ namespace ConsoleApplication1
             FYPNavigation app = new FYPNavigation();
             app.readInputs();
             app.readFiles();
+            app.startNavigation();
             Console.ReadLine();            
         }
 
